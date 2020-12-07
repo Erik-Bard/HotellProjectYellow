@@ -9,4 +9,5 @@
     [Zip] NVARCHAR(10) NULL, 
     [City] NVARCHAR(50) NULL, 
     [Country] NVARCHAR(50) NULL
-)
+);
+
