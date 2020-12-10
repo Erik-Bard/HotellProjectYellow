@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CRUD Application": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "sqlDebugging": false,
+      "remoteDebugMachine": "(localdb)\\MSSQLLocalDB",
+      "authenticationMode": "Windows"
+    }
+  }
+}
