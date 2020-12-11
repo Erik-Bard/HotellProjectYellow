@@ -5,5 +5,5 @@
     [Description] NVARCHAR(50) NULL, 
     [Price] MONEY NULL, 
     [Discount] MONEY NULL, 
-    CONSTRAINT [FK_InvoiceRows_ToInvoices] FOREIGN KEY ([InvoiceId]) REFERENCES [Invoices]([Id])
+    CONSTRAINT [FK_InvoiceRows_ToInvoices] FOREIGN KEY ([InvoiceId]) REFERENCES [Invoices]([InvoiceNumber])
 )

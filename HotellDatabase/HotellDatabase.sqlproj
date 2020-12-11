@@ -76,8 +76,8 @@
     <Build Include="dbo\Tables\ContactPerson.sql" />
     <Build Include="dbo\Tables\Bookings.sql" />
     <Build Include="dbo\Tables\BookingRows.sql" />
-    <Build Include="dbo\Tables\Bills.sql" />
-    <Build Include="dbo\Tables\BillRows.sql" />
+    <Build Include="dbo\Tables\ExtraBills.sql" />
+    <Build Include="dbo\Tables\ExtraBillRows.sql" />
     <Build Include="dbo\Tables\test.sql" />
   </ItemGroup>
   <ItemGroup>

@@ -91,4 +91,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="EmpBoi" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="5996e273-0223-4e09-a584-e8ba6190dfaf" ChangeDateTime="12/11/2020 09:57:46">
+    <Property Name="ElementName" Value="[dbo].[Invoices].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Invoices]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InvoiceNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af2db34d-7bad-4724-ba91-4493631b4378" ChangeDateTime="12/11/2020 09:58:07">
+    <Property Name="ElementName" Value="[dbo].[Bookings].[InvoiceId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Bookings]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="InvoiceNumber" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4958fc67-8266-48fa-8282-90c6af39fda0" ChangeDateTime="12/11/2020 09:59:48">
+    <Property Name="ElementName" Value="[dbo].[ExtraBillRows].[BillId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExtraBillRows]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExtraBillsId" />
+  </Operation>
 </Operations>
