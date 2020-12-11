@@ -1,9 +1,11 @@
 ﻿CREATE TABLE [dbo].[InvoiceRows]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[InvoiceNumber] INT NOT NULL PRIMARY KEY IDENTITY, 
     [InvoiceId] INT NOT NULL, 
     [Description] NVARCHAR(50) NULL, 
     [Price] MONEY NULL, 
     [Discount] MONEY NULL, 
-    CONSTRAINT [FK_InvoiceRows_ToInvoices] FOREIGN KEY ([InvoiceId]) REFERENCES [Invoices]([InvoiceNumber])
+    [ExtraBillsId] INT NOT NULL, 
+    CONSTRAINT [FK_InvoiceRows_ToInvoices] FOREIGN KEY ([InvoiceId]) REFERENCES [Invoices]([Id]), 
+    CONSTRAINT [FK_InvoiceRows_ToExtraBills] FOREIGN KEY ([ExtraBillsId]) REFERENCES [ExtraBills]([Id])
 )
