@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [dbo].[test]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [Name] NVARCHAR(50) NULL
+    [Fname] NVARCHAR(50) NULL, 
+    [Lname] NVARCHAR(50) NULL
 )
