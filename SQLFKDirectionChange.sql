@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[InvoiceRows]
+CREATE TABLE [dbo].[InvoiceRows]
 (
 	[InvoiceNumber] INT NOT NULL PRIMARY KEY IDENTITY, 
     [InvoiceId] INT NOT NULL, 
