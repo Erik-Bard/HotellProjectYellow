@@ -1,0 +1,262 @@
+INSERT INTO HotellDatabase.dbo.Customers 
+(
+	FirstName,LastName,Email,Phone,Street,Zip,City,Country
+)
+VALUES 
+(
+	'Izod','Berger','Izzo23@gmail.com','025689120','52 rue des Fleurs','33500','Libourne', 'France'
+),
+(
+	'Rut','Rutsson','rut@gmail.com','0733732967','Rutgatan 2','56679','Rutberg', 'Sverige'
+),
+(
+	'Ford','Fordsson','ford@hotmail.com','0767732963','87 Hillroad','00279','Bournemouth', 'England'
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.RoomTypes
+(
+	Type,Description
+)
+VALUES
+(
+	'Single', 'A room assigned to one person. May have one or more beds.'
+),
+(
+	'Double', 'A room assigned to two people. May have one or more beds.'
+),
+(
+	'Triple', 'A room assigned to three people. May have two or more beds.'
+),
+(
+	'Quad', 'A room assigned to four people. May have two or more beds.'
+),
+(
+	'Queen', 'A room with a queen-sized bed. May be occupied by one or more people.'
+),
+(
+	'King', 'A room a king-sized bed. May be occupied by one or more people.'
+),
+(
+	'Twin', 'A room with two beds. May be occupied by one or more people.'
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Rooms
+(
+	RoomNumber,RoomTypesId,Price,NoBeds
+)
+
+VALUES
+(
+	100,1002,1000,1
+),
+(
+	101,1003,1000,2
+),
+(
+	102,1004,1000,3
+),
+(
+	103,1005,1000,4
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Ratings
+(
+	RoomId,CustomerId,Rating,Description
+)
+VALUES
+(
+	1,1005,10,'I have never in my life slept in a bed as comfortable as the one provided by this establishment. I am in absolute awe.'
+),
+(
+	2,1006,1,'I feel scammed. They have stolen all my belongings.'
+),
+(
+	3,1007,8,'I have stayed in the Triple suite for seven weeks now, there is nothing I do not love about this hotel.'
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Employees
+(
+	FirstName,LastName,Title,Salary
+)
+VALUES
+(
+	'Anselm','Rodric','Concierge',50000
+),
+(
+	'Cinda','Riose','Maintenance',30000
+),
+(
+	'Eskel','Gorov','General Manager',60000
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.ContactPerson 
+(
+	FullName,Title,EmployeesId
+)
+VALUES
+(
+	'Anselm M. Rodric','Concierge',1002
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Products
+( 
+	Name,Description,Price	
+)
+VALUES
+(
+	'Wine','A bevarage from the Minibar.', 750
+),
+(
+	'Whiskey','A bevarage from the Minibar.', 850
+),
+(
+	'Fluffy Pillows','For guaranteed comfort.', 100
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.PaymentMethods
+(
+	Type
+)
+VALUES
+(
+	'Cash'
+),
+(
+	'Debit'
+),
+(
+	'Credit'
+),
+(
+	'Mobile'
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Bookings
+(
+	BookingDate,BookedFrom,BookedTo,CustomerId,Request,TotalAmount,NoShow
+)
+VALUES
+(
+	'20201010','20201215','20201220',1005,'Do not talk to me.',5000,1
+),
+(
+	'20201105 10:00','20201216 11:00','20201221 12:00',1006,'Put flowers on my bed',5500,1
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.BookingRows
+(
+	BookingId,RoomId,NoGuests,NoExtrabeds,CheckIn,CheckOut,Price,Discount
+)
+VALUES
+(
+	1002,1003,0,0,'2020-12-15 13:30','2020-12-20 12:00',1000,0
+),
+(
+	1003,1003,0,0,'2020-12-16 14:00','2020-12-21 11:59',1000,0
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.ExtraBills
+(
+	BookingRowsId,Paid
+)
+VALUES
+(
+	1,0
+),
+(
+	2,1
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.ExtraBillRows
+(
+	ExtraBillsId,ProductId
+)
+VALUES
+(
+	2,9
+),
+(
+	3,7
+);
+
+GO
+
+INSERT INTO Invoices (PaymentMethodId,PaymentDate,TotalAmount,Paid)
+VALUES 
+(
+	23,'20201222 22:00',5500,1
+),
+(
+	25,'20201225 06:10',4500,1
+);
+
+GO
+
+INSERT INTO HotellDataBase.dbo.InvoiceRows
+(
+	InvoiceId,Description,Price,Discount,BookingId,ExtraBillsId
+)
+VALUES
+(
+	3,'1 x Single Room, 1 x Fluffy Pillow',5500,2000,1002,2
+),
+(
+	4,'1 x Single Room, 1 x Wine',7500,500,1003,3
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Messages
+(
+	sent,message,BookingId
+)
+VALUES
+(
+	'20201216 04:20','I am locked in closet please help',1002
+),
+(
+	'20201216 04:20','I am also locked in closet please help',1003
+);
+
+GO
+
+INSERT INTO HotellDatabase.dbo.Feedback
+(
+	BookingId,Thoughts
+)
+VALUES
+(	
+	1002,'What a hotel. And what an especially beautiful database they have. They are holding a gun to my hea- And the rooms were very clean.'
+),
+(
+	1003,'Good wine, 2/10'
+);
+
+
+
+
+
+
+
