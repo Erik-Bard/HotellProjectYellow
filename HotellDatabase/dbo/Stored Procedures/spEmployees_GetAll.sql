@@ -6,6 +6,6 @@ BEGIN
 SET NOCOUNT ON
 
 	SELECT FirstName, LastName, Title
-	FROM Customers
+	FROM Employees
 
 END
