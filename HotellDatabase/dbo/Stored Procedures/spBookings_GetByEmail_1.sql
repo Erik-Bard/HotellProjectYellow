@@ -22,4 +22,5 @@ SET NOCOUNT ON
 	INNER JOIN Bookings ON Customers.Id = Bookings.CustomerId
 
 	WHERE Email = @Email
+RETURN
 END
