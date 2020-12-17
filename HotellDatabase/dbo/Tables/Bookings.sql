@@ -9,4 +9,5 @@
     [TotalAmount] MONEY NOT NULL, 
     [NoShow] BIT NOT NULL, 
     CONSTRAINT [FK_Bookings_ToCustomers] FOREIGN KEY ([CustomerId]) REFERENCES [Customers]([Id])
+    ON DELETE CASCADE
 )

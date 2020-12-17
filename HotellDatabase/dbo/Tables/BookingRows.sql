@@ -9,6 +9,6 @@
     [CheckOut] DATETIME2 NOT NULL DEFAULT getutcdate(), 
     [Price] MONEY NOT NULL, 
     [Discount] MONEY NOT NULL, 
-    CONSTRAINT [FK_BookingRows_ToBookings] FOREIGN KEY ([BookingId]) REFERENCES [Bookings]([Id]), 
+    CONSTRAINT [FK_BookingRows_ToBookings] FOREIGN KEY ([BookingId]) REFERENCES [Bookings]([Id]) ON DELETE CASCADE, 
     CONSTRAINT [FK_BookingRows_ToRooms] FOREIGN KEY ([RoomId]) REFERENCES [Rooms]([Id])
 )
