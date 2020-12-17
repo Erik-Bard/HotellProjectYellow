@@ -17,9 +17,10 @@ SET NOCOUNT ON
 		RETURN
 	END  
 
-	SELECT Email, FirstName, LastName, BookingDate, BookedFrom, BookedTo, Request, TotalAmount
-	FROM Customers
-	INNER JOIN Bookings ON Customers.Id = Bookings.CustomerId
+	SELECT C.Email, C.FirstName, C.LastName, 
+	B.BookingDate, B.BookedFrom, B.BookedTo, B.Request, B.TotalAmount
+	FROM Customers AS C
+	INNER JOIN Bookings AS B ON C.Id = B.CustomerId
 
 	WHERE Email = @Email
 RETURN
